@@ -4,6 +4,7 @@ import Hero3D from "./components/Hero3D";
 import medicineImg from "@/images/medicine.jpeg";
 import financeImg from "@/images/finance.jpeg";
 import logisticsImg from "@/images/logistics.jpeg";
+import BetaModal from "./components/BetaModal";
 
 function Nav() {
   return (
@@ -19,7 +20,7 @@ function Nav() {
           <a href="#faq" className="transition-colors hover:text-[var(--foreground)]">FAQ</a>
         </nav>
         <div className="flex items-center gap-2">
-          <a href="#cta" className="hidden rounded-full border border-[var(--border-soft)] px-4 py-2 text-sm text-[var(--foreground)] hover:bg-[var(--surface-2)]/40 md:inline-block">Join Beta</a>
+          <a href="#beta" className="hidden rounded-full border border-[var(--border-soft)] px-4 py-2 text-sm text-[var(--foreground)] hover:bg-[var(--surface-2)]/40 md:inline-block">Join Beta</a>
           <a href="mailto:hello@quantumleap.ai?subject=Request%20a%20Consultation" className="rounded-full bg-gradient-to-r from-brand-600 to-brand-500 px-4 py-2 text-sm font-medium text-white hover:opacity-90">Request a Consultation</a>
         </div>
       </div>
@@ -47,7 +48,7 @@ function Hero() {
               <a href="mailto:hello@quantumleap.ai?subject=Request%20a%20Consultation" className="rounded-full bg-gradient-to-r from-brand-600 to-brand-500 px-6 py-3 text-sm font-medium text-white hover:opacity-90 animate-fade-up" style={{ animationDelay: "180ms" }}>
                 Request a Consultation
               </a>
-              <a href="#cta" className="rounded-full border border-[var(--border-soft)] px-6 py-3 text-sm text-[var(--foreground)] hover:bg-[var(--surface-2)]/40 animate-fade-up" style={{ animationDelay: "220ms" }}>
+              <a href="#beta" className="rounded-full border border-[var(--border-soft)] px-6 py-3 text-sm text-[var(--foreground)] hover:bg-[var(--surface-2)]/40 animate-fade-up" style={{ animationDelay: "220ms" }}>
                 Join Our Beta Program
               </a>
             </div>
@@ -281,7 +282,7 @@ function FinalCTA() {
             <a href="mailto:hello@quantumleap.ai?subject=Request%20a%20Consultation" className="rounded-full bg-brand-600 px-6 py-3 text-sm font-medium text-white hover:opacity-90">
               Request a Consultation
             </a>
-            <a href="https://cal.com/" target="_blank" rel="noreferrer" className="rounded-full border border-[var(--border-soft)] px-6 py-3 text-sm text-[var(--foreground)] hover:bg-[var(--surface-2)]/40">
+            <a href="#beta" className="rounded-full border border-[var(--border-soft)] px-6 py-3 text-sm text-[var(--foreground)] hover:bg-[var(--surface-2)]/40">
               Join Our Beta Program
             </a>
           </div>
@@ -313,6 +314,7 @@ function Footer() {
 export default function Home() {
   return (
     <div className="font-sans">
+      <BetaModal />
       <Nav />
       <Hero />
       <Metrics />
